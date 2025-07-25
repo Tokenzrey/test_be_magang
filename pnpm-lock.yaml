@@ -47,6 +47,9 @@ importers:
       pino-http:
         specifier: 10.5.0
         version: 10.5.0
+      pino-pretty:
+        specifier: 13.0.0
+        version: 13.0.0
       sequelize:
         specifier: ^6.37.7
         version: 6.37.7(mysql2@3.14.2)
@@ -81,9 +84,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: 3.2.4
         version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.0.13)(tsx@4.20.3)(yaml@2.8.0))
-      pino-pretty:
-        specifier: 13.0.0
-        version: 13.0.0
       supertest:
         specifier: 7.1.4
         version: 7.1.4

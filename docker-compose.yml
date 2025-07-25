@@ -1,6 +1,21 @@
 version: "3.8"
 
 services:
+  db:
+    image: mysql:8.4
+    container_name: express-typescript-mysql
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-test_be_vehicle_tracker_db}
+      MYSQL_ROOT_PASSWORD: ${DB_PASS:-root}
+      # Jangan set MYSQL_USER jika ingin pakai user root!
+    ports:
+      - "3307:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    restart: unless-stopped
+    networks:
+      - backend
+
   app:
     build:
       context: .
@@ -16,24 +31,8 @@ services:
     networks:
       - backend
     volumes:
-      - .:/app
+      - .:/app:ro
       - /app/node_modules
-
-  db:
-    image: mysql:8.4
-    container_name: express-typescript-mysql
-    environment:
-      MYSQL_DATABASE: ${DB_NAME:-express_auth_db}
-      MYSQL_USER: ${DB_USER:-root}
-      MYSQL_PASSWORD: ${DB_PASS:-}
-      MYSQL_ROOT_PASSWORD: ${DB_PASS:-}
-    ports:
-      - "3307:3306"
-    volumes:
-      - db-data:/var/lib/mysql
-    restart: unless-stopped
-    networks:
-      - backend
 
 volumes:
   db-data:
