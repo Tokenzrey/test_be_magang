@@ -1,0 +1,2590 @@
+{
+	"info": {
+		"_postman_id": "ac2899e2-e4c1-46cc-8bc1-a3e220d2b990",
+		"name": "Swagger API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30534112",
+		"_collection_link": "https://erp888-5285.postman.co/workspace/tes_be_magang~092ff241-8043-4183-b5c0-f7a90a0d12f9/collection/30534112-ac2899e2-e4c1-46cc-8bc1-a3e220d2b990?action=share&source=collection_link&creator=30534112"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"item": [
+						{
+							"name": "/auth/login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"tokenzrey3@gmail.com\",\n  \"password\": \"Tebuireng1\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Login successful",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"Pt5j7AkRf4OTnW@Cgag.nrpr\",\n  \"password\": \"occaecat Lorem tempor consequat\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": false,\n  \"message\": \"fugiat occaecat esse\",\n  \"statusCode\": 23340733.66667874,\n  \"responseObject\": {\n    \"accessToken\": \"laborum cillum do aliquip\",\n    \"refreshToken\": \"cillum dolor sed\",\n    \"expiresAt\": \"id et dolore magna\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"item": [
+						{
+							"name": "/auth/logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-refresh-token",
+										"value": "exercitation mollit quis proident",
+										"description": "(Required) ",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/auth/logout",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Logged out",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-refresh-token",
+												"value": "exercitation mollit quis proident",
+												"description": "(Required) "
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/auth/logout",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"logout"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": true,\n  \"message\": \"veniam nulla reprehenderit sed\",\n  \"statusCode\": -98666938.43761265,\n  \"responseObject\": {\n    \"nullable\": true\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "me",
+					"item": [
+						{
+							"name": "/auth/me",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/auth/me",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"me"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Authenticated",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/auth/me",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"me"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": true,\n  \"message\": \"nisi esse ipsum Ut \",\n  \"statusCode\": 49205353.4073163,\n  \"responseObject\": {\n    \"id\": -49168534.11199393,\n    \"email\": \"b8KRbbRo@rzEpyuQnOtNkKvYgXFJstk.dphx\",\n    \"role\": \"USER\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "refresh",
+					"item": [
+						{
+							"name": "/auth/refresh",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-refresh-token",
+										"value": "{{refresh_token}}",
+										"description": "(Required) "
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/auth/refresh",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"refresh"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Token refreshed",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-refresh-token",
+												"value": "exercitation mollit quis proident",
+												"description": "(Required) "
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/auth/refresh",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"refresh"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": false,\n  \"message\": \"fugiat occaecat esse\",\n  \"statusCode\": 23340733.66667874,\n  \"responseObject\": {\n    \"accessToken\": \"laborum cillum do aliquip\",\n    \"refreshToken\": \"cillum dolor sed\",\n    \"expiresAt\": \"id et dolore magna\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "register",
+					"item": [
+						{
+							"name": "/auth/register",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"tokenzrey2@gmail.com\",\n  \"password\": \"Tebuireng1\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Registration successful",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"rn3ePEbY@IqYezIXZEuAJUpwlGJvsxwvcVsvj.niw\",\n  \"password\": \"VVVVVVVV\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"register"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": true,\n  \"message\": \"veniam nulla reprehenderit sed\",\n  \"statusCode\": -98666938.43761265,\n  \"responseObject\": {\n    \"nullable\": true\n  }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "health-check",
+			"item": [
+				{
+					"name": "/health-check",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/health-check",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"health-check"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/health-check",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"health-check"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"success\": true,\n  \"message\": \"veniam nulla reprehenderit sed\",\n  \"statusCode\": -98666938.43761265,\n  \"responseObject\": {\n    \"nullable\": true\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "/users/:id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "exercitation mollit quis proident",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "User deleted",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": true,\n  \"message\": \"veniam nulla reprehenderit sed\",\n  \"statusCode\": -98666938.43761265,\n  \"responseObject\": {\n    \"nullable\": true\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "/users/:id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": false,\n  \"message\": \"nostrud officia eu do anim\",\n  \"statusCode\": 36436991.77151495,\n  \"responseObject\": {\n    \"id\": -50695226.831597485,\n    \"email\": \"G3ESlVa2dZ5a@MKZylzoQCFgZNxzMaOrAehMfVRFQ.nez\",\n    \"role\": \"ADMIN\",\n    \"createdAt\": \"mollit Lorem\",\n    \"updatedAt\": \"dolor sint\"\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "/users/:id",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"tokenzrey3@gmail.com\",\n  \"role\": \"ADMIN\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "User updated",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"qGVep3@vuSUKEFCgVlfIahfwJIdqsNhRYfbbL.wcnf\",\n  \"password\": \"QQQQQQQQ\",\n  \"role\": \"ADMIN\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": false,\n  \"message\": \"nostrud officia eu do anim\",\n  \"statusCode\": 36436991.77151495,\n  \"responseObject\": {\n    \"id\": -50695226.831597485,\n    \"email\": \"G3ESlVa2dZ5a@MKZylzoQCFgZNxzMaOrAehMfVRFQ.nez\",\n    \"role\": \"ADMIN\",\n    \"createdAt\": \"mollit Lorem\",\n    \"updatedAt\": \"dolor sint\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "/users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"success\": false,\n  \"message\": \"et\",\n  \"statusCode\": 76150027.0846285,\n  \"responseObject\": [\n    {\n      \"id\": -7948862.230349362,\n      \"email\": \"KA4@liAEscaiYJdUrRNWvt.qmyi\",\n      \"role\": \"ADMIN\",\n      \"createdAt\": \"esse\",\n      \"updatedAt\": \"anim in nostrud\"\n    },\n    {\n      \"id\": -75018580.4595874,\n      \"email\": \"ILgwvU@wuFHLkjvNhUJyaYxVMTAet.sxz\",\n      \"role\": \"ADMIN\",\n      \"createdAt\": \"pariatur\",\n      \"updatedAt\": \"voluptate aliquip fugiat deserunt\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"mH5aaVw@ajjlRbQCmZiRaqNyWWtTXMEs.gl\",\n  \"password\": \"nnnnnnnn\",\n  \"role\": \"USER\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"mH5aaVw@ajjlRbQCmZiRaqNyWWtTXMEs.gl\",\n  \"password\": \"nnnnnnnn\",\n  \"role\": \"USER\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"success\": false,\n  \"message\": \"nostrud officia eu do anim\",\n  \"statusCode\": 36436991.77151495,\n  \"responseObject\": {\n    \"id\": -50695226.831597485,\n    \"email\": \"G3ESlVa2dZ5a@MKZylzoQCFgZNxzMaOrAehMfVRFQ.nez\",\n    \"role\": \"ADMIN\",\n    \"createdAt\": \"mollit Lorem\",\n    \"updatedAt\": \"dolor sint\"\n  }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "telementry",
+			"item": [
+				{
+					"name": "latest",
+					"item": [
+						{
+							"name": "vehicles",
+							"item": [
+								{
+									"name": "/latest/vehicles",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/telementry-logs/latest/vehicles",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry-logs",
+												"latest",
+												"vehicles"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Latest telemetry logs for all vehicles owned by user (or all for ADMIN)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/latest/vehicles",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"latest",
+														"vehicles"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"vehicle_id\": -48744261.247132756,\n    \"log\": {\n      \"id\": -36637479.779232904,\n      \"vehicle_id\": -87171879.70516522,\n      \"timestamp\": \"1992-10-12T12:51:44.216Z\",\n      \"data\": {\n        \"odometer\": 29875317.948827162,\n        \"fuel_level\": 25.235902974587532,\n        \"speed\": 58816057.75192975,\n        \"lat\": -1.2316112797971357,\n        \"lon\": 3.3974532642069164\n      }\n    }\n  },\n  {\n    \"vehicle_id\": 72194384.76070157,\n    \"log\": {\n      \"id\": -23963431.536084563,\n      \"vehicle_id\": -49266727.21864671,\n      \"timestamp\": \"1967-01-31T16:54:20.216Z\",\n      \"data\": {\n        \"odometer\": 10886617.74323547,\n        \"fuel_level\": 8.504200039978382,\n        \"speed\": 35183550.95664994,\n        \"lat\": 22.29384193559133,\n        \"lon\": 100.88279944408674\n      }\n    }\n  }\n]"
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/latest/vehicles",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"latest",
+														"vehicles"
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "stats",
+					"item": [
+						{
+							"name": "/telementry/stats",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/telementry-logs/stats",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"telementry-logs",
+										"stats"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vehicle stats found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/telementry/stats",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry",
+												"stats"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"total\": -51358014.032627165,\n  \"moving\": -4766041.407824457,\n  \"parked\": -10816796.9104577,\n  \"maintenance\": -28812380.652209327\n}"
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/telementry/stats",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry",
+												"stats"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "vehicles",
+							"item": [
+								{
+									"name": "all",
+									"item": [
+										{
+											"name": "/:id/vehicles/all",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/telementry-logs/4/vehicles/all",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"telementry-logs",
+														"4",
+														"vehicles",
+														"all"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "All telemetry logs found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/:id/vehicles/all",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																":id",
+																"vehicles",
+																"all"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"id\": -97867283.45463601,\n    \"vehicle_id\": -47105579.744922735,\n    \"timestamp\": \"2015-01-30T10:46:11.368Z\",\n    \"data\": {\n      \"odometer\": 92764752.71821406,\n      \"fuel_level\": 8.446887947291737,\n      \"speed\": 76539117.26121005,\n      \"lat\": -10.203264177154011,\n      \"lon\": 109.38259371771977\n    }\n  },\n  {\n    \"id\": 29724079.806240186,\n    \"vehicle_id\": -56176963.368591525,\n    \"timestamp\": \"1949-11-06T12:48:47.369Z\",\n    \"data\": {\n      \"odometer\": 6119499.096881164,\n      \"fuel_level\": 68.2941972646147,\n      \"speed\": 27430020.261392385,\n      \"lat\": -71.19645218293705,\n      \"lon\": 132.52271100978203\n    }\n  }\n]"
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/:id/vehicles/all",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																":id",
+																"vehicles",
+																"all"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Vehicle not found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/:id/vehicles/all",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																":id",
+																"vehicles",
+																"all"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "latest",
+									"item": [
+										{
+											"name": "/:id/vehicles/latest",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "{{token}}",
+														"type": "text"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/telementry-logs/4/vehicles/latest",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"telementry-logs",
+														"4",
+														"vehicles",
+														"latest"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Latest telemetry log found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/:id/vehicles/latest",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																":id",
+																"vehicles",
+																"latest"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": -81194767.54716381,\n  \"vehicle_id\": -26287218.086826414,\n  \"timestamp\": \"1984-08-22T05:11:15.086Z\",\n  \"data\": {\n    \"odometer\": 72339622.718871,\n    \"fuel_level\": 23.504978509222507,\n    \"speed\": 24338417.919418577,\n    \"lat\": 75.2834917209826,\n    \"lon\": -11.104345076639675\n  }\n}"
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/:id/vehicles/latest",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																":id",
+																"vehicles",
+																"latest"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "Vehicle not found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/:id/vehicles/latest",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																":id",
+																"vehicles",
+																"latest"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "/:id/vehicles",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/telementry-logs/4/vehicles?limit=92325100&page=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry-logs",
+												"4",
+												"vehicles"
+											],
+											"query": [
+												{
+													"key": "vehicle_id",
+													"value": "69704855.97207999",
+													"disabled": true
+												},
+												{
+													"key": "from",
+													"value": "1952-08-25T05:26:31.288Z",
+													"disabled": true
+												},
+												{
+													"key": "to",
+													"value": "1952-08-25T05:26:31.288Z",
+													"disabled": true
+												},
+												{
+													"key": "limit",
+													"value": "92325100"
+												},
+												{
+													"key": "page",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Telemetry logs found (paginated)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/:id/vehicles?vehicle_id=69704855.97207999&from=1952-08-25T05:26:31.288Z&to=1952-08-25T05:26:31.288Z&limit=92325100&page=92325100",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														":id",
+														"vehicles"
+													],
+													"query": [
+														{
+															"key": "vehicle_id",
+															"value": "69704855.97207999"
+														},
+														{
+															"key": "from",
+															"value": "1952-08-25T05:26:31.288Z"
+														},
+														{
+															"key": "to",
+															"value": "1952-08-25T05:26:31.288Z"
+														},
+														{
+															"key": "limit",
+															"value": "92325100"
+														},
+														{
+															"key": "page",
+															"value": "92325100"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": [\n    {\n      \"id\": -18453516.638026908,\n      \"vehicle_id\": 79467434.95345458,\n      \"timestamp\": \"2006-03-28T17:16:21.064Z\",\n      \"data\": {\n        \"odometer\": 79903619.36780834,\n        \"fuel_level\": 77.60694387941606,\n        \"speed\": 32394590.27863587,\n        \"lat\": 27.347116045944716,\n        \"lon\": -84.4586050790001\n      }\n    },\n    {\n      \"id\": 56565194.51807371,\n      \"vehicle_id\": 79588592.60159498,\n      \"timestamp\": \"1997-08-09T07:21:33.971Z\",\n      \"data\": {\n        \"odometer\": 87826794.93464643,\n        \"fuel_level\": 55.633535800814585,\n        \"speed\": 36577157.9289331,\n        \"lat\": -2.1977784973025507,\n        \"lon\": -14.116691512661362\n      }\n    }\n  ],\n  \"pagination\": {\n    \"total\": 20295112.127373382,\n    \"page\": -68980145.92456608,\n    \"limit\": 57767269.88648692,\n    \"pages\": 56082933.464020014\n  }\n}"
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/:id/vehicles?vehicle_id=69704855.97207999&from=1952-08-25T05:26:31.288Z&to=1952-08-25T05:26:31.288Z&limit=92325100&page=92325100",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														":id",
+														"vehicles"
+													],
+													"query": [
+														{
+															"key": "vehicle_id",
+															"value": "69704855.97207999"
+														},
+														{
+															"key": "from",
+															"value": "1952-08-25T05:26:31.288Z"
+														},
+														{
+															"key": "to",
+															"value": "1952-08-25T05:26:31.288Z"
+														},
+														{
+															"key": "limit",
+															"value": "92325100"
+														},
+														{
+															"key": "page",
+															"value": "92325100"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Vehicle not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/:id/vehicles?vehicle_id=69704855.97207999&from=1952-08-25T05:26:31.288Z&to=1952-08-25T05:26:31.288Z&limit=92325100&page=92325100",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														":id",
+														"vehicles"
+													],
+													"query": [
+														{
+															"key": "vehicle_id",
+															"value": "69704855.97207999"
+														},
+														{
+															"key": "from",
+															"value": "1952-08-25T05:26:31.288Z"
+														},
+														{
+															"key": "to",
+															"value": "1952-08-25T05:26:31.288Z"
+														},
+														{
+															"key": "limit",
+															"value": "92325100"
+														},
+														{
+															"key": "page",
+															"value": "92325100"
+														}
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/:id/vehicles",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "{{token}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"vehicle_id\": -91399028.13754892,\n  \"data\": {\n    \"odometer\": 20461904.10899724,\n    \"fuel_level\": 35.2117590430356,\n    \"speed\": 5064871.7550948905,\n    \"lat\": 31.280945056635275,\n    \"lon\": 141.38855208455612\n  },\n  \"timestamp\": \"1958-01-11T02:13:41.650Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/telementry-logs/4/vehicles",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry-logs",
+												"4",
+												"vehicles"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Telemetry log created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"vehicle_id\": -91399028.13754892,\n  \"data\": {\n    \"odometer\": 20461904.10899724,\n    \"fuel_level\": 35.2117590430356,\n    \"speed\": 5064871.7550948905,\n    \"lat\": 31.280945056635275,\n    \"lon\": 141.38855208455612\n  },\n  \"timestamp\": \"1958-01-11T02:13:41.650Z\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/:id/vehicles",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														":id",
+														"vehicles"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": -43601458.776092984,\n  \"vehicle_id\": -63657526.31672383,\n  \"timestamp\": \"1971-07-19T10:14:18.026Z\",\n  \"data\": {\n    \"odometer\": 63260174.24747845,\n    \"fuel_level\": 0.11584734900702554,\n    \"speed\": 29639704.14144934,\n    \"lat\": -38.60013775881867,\n    \"lon\": -166.39393582893473\n  }\n}"
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"vehicle_id\": -91399028.13754892,\n  \"data\": {\n    \"odometer\": 20461904.10899724,\n    \"fuel_level\": 35.2117590430356,\n    \"speed\": 5064871.7550948905,\n    \"lat\": 31.280945056635275,\n    \"lon\": 141.38855208455612\n  },\n  \"timestamp\": \"1958-01-11T02:13:41.650Z\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/:id/vehicles",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														":id",
+														"vehicles"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Vehicle not found",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"vehicle_id\": -91399028.13754892,\n  \"data\": {\n    \"odometer\": 20461904.10899724,\n    \"fuel_level\": 35.2117590430356,\n    \"speed\": 5064871.7550948905,\n    \"lat\": 31.280945056635275,\n    \"lon\": 141.38855208455612\n  },\n  \"timestamp\": \"1958-01-11T02:13:41.650Z\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/:id/vehicles",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														":id",
+														"vehicles"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "{logId}",
+					"item": [
+						{
+							"name": "/telementry/:logId",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/telementry-logs/55",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"telementry-logs",
+										"55"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Telemetry log deleted",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/telementry/:logId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry",
+												":logId"
+											],
+											"variable": [
+												{
+													"key": "logId"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/telementry/:logId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry",
+												":logId"
+											],
+											"variable": [
+												{
+													"key": "logId"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Telemetry log not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/telementry/:logId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry",
+												":logId"
+											],
+											"variable": [
+												{
+													"key": "logId"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/telementry/:logId",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/telementry-logs/56",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"telementry-logs",
+										"56"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Telemetry log found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/telementry/:logId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry",
+												":logId"
+											],
+											"variable": [
+												{
+													"key": "logId"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 68816134.63526452,\n  \"vehicle_id\": -64782528.0440804,\n  \"timestamp\": \"1962-09-16T07:13:36.832Z\",\n  \"data\": {\n    \"odometer\": 70296463.55866033,\n    \"fuel_level\": 24.20929843069053,\n    \"speed\": 11542750.823058734,\n    \"lat\": -34.81872694043001,\n    \"lon\": 178.16239410727604\n  }\n}"
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/telementry/:logId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry",
+												":logId"
+											],
+											"variable": [
+												{
+													"key": "logId"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Telemetry log not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/telementry/:logId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry",
+												":logId"
+											],
+											"variable": [
+												{
+													"key": "logId"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/telementry/:logId",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"data\": {\n    \"odometer\": 46244212.54954449,\n    \"fuel_level\": 22.423317019728685,\n    \"speed\": 98297809.9648357,\n    \"lat\": 73.6636193704266,\n    \"lon\": -121.0006532750175\n  },\n  \"timestamp\": \"1987-10-01T17:35:37.624Z\",\n  \"vehicle_id\": -6454750.821785688\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/telementry-logs/55",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"telementry-logs",
+										"55"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Telemetry log updated",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"data\": {\n    \"odometer\": 46244212.54954449,\n    \"fuel_level\": 22.423317019728685,\n    \"speed\": 98297809.9648357,\n    \"lat\": 73.6636193704266,\n    \"lon\": -121.0006532750175\n  },\n  \"timestamp\": \"1987-10-01T17:35:37.624Z\",\n  \"vehicle_id\": -6454750.821785688\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/telementry/:logId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry",
+												":logId"
+											],
+											"variable": [
+												{
+													"key": "logId"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 68816134.63526452,\n  \"vehicle_id\": -64782528.0440804,\n  \"timestamp\": \"1962-09-16T07:13:36.832Z\",\n  \"data\": {\n    \"odometer\": 70296463.55866033,\n    \"fuel_level\": 24.20929843069053,\n    \"speed\": 11542750.823058734,\n    \"lat\": -34.81872694043001,\n    \"lon\": 178.16239410727604\n  }\n}"
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"data\": {\n    \"odometer\": 46244212.54954449,\n    \"fuel_level\": 22.423317019728685,\n    \"speed\": 98297809.9648357,\n    \"lat\": 73.6636193704266,\n    \"lon\": -121.0006532750175\n  },\n  \"timestamp\": \"1987-10-01T17:35:37.624Z\",\n  \"vehicle_id\": -6454750.821785688\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/telementry/:logId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry",
+												":logId"
+											],
+											"variable": [
+												{
+													"key": "logId"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Telemetry log not found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"data\": {\n    \"odometer\": 46244212.54954449,\n    \"fuel_level\": 22.423317019728685,\n    \"speed\": 98297809.9648357,\n    \"lat\": 73.6636193704266,\n    \"lon\": -121.0006532750175\n  },\n  \"timestamp\": \"1987-10-01T17:35:37.624Z\",\n  \"vehicle_id\": -6454750.821785688\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/telementry/:logId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"telementry",
+												":logId"
+											],
+											"variable": [
+												{
+													"key": "logId"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "vehicles",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "/vehicles/:id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/vehicles/3",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"vehicles",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vehicle deleted",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/vehicles/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"vehicles",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": false,\n  \"message\": \"dolore officia ut\",\n  \"statusCode\": -75849818.85379158,\n  \"responseObject\": {\n    \"nullable\": true\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "/vehicles/:id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/vehicles/3",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"vehicles",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vehicle detail",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/vehicles/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"vehicles",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": true,\n  \"message\": \"dolore do dolor\",\n  \"statusCode\": 6633243.642241776,\n  \"responseObject\": {\n    \"id\": -20839114.2533769,\n    \"name\": \"mollit eu ut in aute\",\n    \"license_plate\": \"tempor eiusmod exercitation Lorem incididunt\",\n    \"status\": \"ACTIVE\",\n    \"user_id\": -29612040.80502999,\n    \"created_at\": \"1989-12-19T23:53:32.643Z\",\n    \"updated_at\": \"1966-12-04T07:32:56.514Z\",\n    \"deleted_at\": \"1979-08-16T04:36:00.533Z\",\n    \"model\": \"aliquip minim aliqua mollit\"\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "/vehicles/:id",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"license_plate\": \"asdasda\",\n  \"model\": \"asdadasdadad\",\n  \"name\": \"reprehenderit dolor laborum cupidatat esse\",\n  \"status\": \"INACTIVE\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/vehicles/3",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"vehicles",
+										"3"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Vehicle updated",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"license_plate\": \"Lorem consectetur\",\n  \"model\": \"id\",\n  \"name\": \"reprehenderit dolor laborum cupidatat esse\",\n  \"status\": \"INACTIVE\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/vehicles/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"vehicles",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"success\": true,\n  \"message\": \"dolore do dolor\",\n  \"statusCode\": 6633243.642241776,\n  \"responseObject\": {\n    \"id\": -20839114.2533769,\n    \"name\": \"mollit eu ut in aute\",\n    \"license_plate\": \"tempor eiusmod exercitation Lorem incididunt\",\n    \"status\": \"ACTIVE\",\n    \"user_id\": -29612040.80502999,\n    \"created_at\": \"1989-12-19T23:53:32.643Z\",\n    \"updated_at\": \"1966-12-04T07:32:56.514Z\",\n    \"deleted_at\": \"1979-08-16T04:36:00.533Z\",\n    \"model\": \"aliquip minim aliqua mollit\"\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "/vehicles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/vehicles?page=1&limit=72227656",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicles"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "qui magna",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "ACTIVE",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "72227656"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Vehicle list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/vehicles?search=qui magna&status=ACTIVE&page=72227656&limit=72227656",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"vehicles"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "qui magna"
+										},
+										{
+											"key": "status",
+											"value": "ACTIVE"
+										},
+										{
+											"key": "page",
+											"value": "72227656"
+										},
+										{
+											"key": "limit",
+											"value": "72227656"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"success\": true,\n  \"message\": \"esse et labo\",\n  \"statusCode\": 41254775.1289261,\n  \"responseObject\": {\n    \"data\": [\n      {\n        \"id\": -49050831.9976914,\n        \"name\": \"nis\",\n        \"license_plate\": \"ut tempor reprehenderit dolor\",\n        \"status\": \"ACTIVE\",\n        \"user_id\": 10854513.260619521,\n        \"created_at\": \"1959-11-25T06:02:39.676Z\",\n        \"updated_at\": \"1949-07-01T22:28:09.186Z\",\n        \"deleted_at\": \"1990-11-05T05:37:35.212Z\",\n        \"model\": \"ullamco proident deserunt\"\n      },\n      {\n        \"id\": 71099759.61423504,\n        \"name\": \"do voluptate\",\n        \"license_plate\": \"et dolore\",\n        \"status\": \"INACTIVE\",\n        \"user_id\": -45910399.688220814,\n        \"created_at\": \"1991-03-11T08:58:21.514Z\",\n        \"updated_at\": \"2021-03-23T16:00:01.859Z\",\n        \"deleted_at\": \"1972-07-20T11:28:33.581Z\",\n        \"model\": \"veniam volu\"\n      }\n    ],\n    \"pagination\": {\n      \"total\": 58188061.497442245,\n      \"page\": -55133704.73736883,\n      \"limit\": -42019020.152237244,\n      \"pages\": 48462719.57347894\n    }\n  }\n}"
+						}
+					]
+				},
+				{
+					"name": "/vehicles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"ut sed\",\n  \"license_plate\": \"eiusmod dolore anim qui \",\n  \"model\": \"in dolore consectetur\",\n  \"status\": \"INACTIVE\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/vehicles",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"vehicles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Vehicle created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"ut sed\",\n  \"license_plate\": \"eiusmod dolore anim qui \",\n  \"model\": \"in dolore consectetur\",\n  \"status\": \"INACTIVE\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/vehicles",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"vehicles"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"success\": true,\n  \"message\": \"dolore do dolor\",\n  \"statusCode\": 6633243.642241776,\n  \"responseObject\": {\n    \"id\": -20839114.2533769,\n    \"name\": \"mollit eu ut in aute\",\n    \"license_plate\": \"tempor eiusmod exercitation Lorem incididunt\",\n    \"status\": \"ACTIVE\",\n    \"user_id\": -29612040.80502999,\n    \"created_at\": \"1989-12-19T23:53:32.643Z\",\n    \"updated_at\": \"1966-12-04T07:32:56.514Z\",\n    \"deleted_at\": \"1979-08-16T04:36:00.533Z\",\n    \"model\": \"aliquip minim aliqua mollit\"\n  }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
