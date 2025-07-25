@@ -77,6 +77,10 @@ export class AuthService {
 					StatusCodes.UNAUTHORIZED
 				);
 			}
+
+			// Hapus semua refresh token user sebelum membuat yang baru
+			await RefreshToken.destroy({ where: { user_id: user.id } });
+			debug("All previous refresh tokens deleted", { userId: user.id });
 			const accessToken = generateAccessToken({ id: user.id, role: user.role });
 			const refreshToken = generateRefreshToken();
 			const expiresAt = new Date(Date.now() + env.REFRESH_EXPIRES_IN * 1000);
